@@ -10,33 +10,46 @@ export default function Home() {
         <p className="text-lg text-gray-600">
           Získaj prehľad, šetri čas a nechaj AI pracovať za teba.
         </p>
-        <div className="flex justify-center space-x-4">
-          <Link href="/pdf">
-            <button className="px-6 py-3 bg-indigo-600 text-white rounded-xl hover:bg-indigo-700">
-              Začni so sumarizátorom
-            </button>
-          </Link>
-        </div>
       </section>
 
       <section className="mt-20 grid gap-8 md:grid-cols-3">
+        {/* Sumarizátor PDF */}
         <div className="rounded-xl border border-gray-200 bg-white shadow-sm p-6 text-center hover:shadow-md transition">
-          <h2 className="text-xl font-semibold mt-2">Sumarizátor PDF</h2>
+          <h2 className="text-xl font-semibold">Sumarizátor PDF</h2>
           <p className="text-gray-500 mt-2">
             Nahraj dokument a získaj stručné zhrnutie za pár sekúnd.
           </p>
+          <Link href="/pdf">
+            <button className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-700 transition">
+              Otvoriť nástroj
+            </button>
+          </Link>
         </div>
+
+        {/* Generátor titulkov */}
         <div className="rounded-xl border border-gray-200 bg-white shadow-sm p-6 text-center hover:shadow-md transition">
-          <h2 className="text-xl font-semibold mt-2">Generátor titulkov</h2>
+          <h2 className="text-xl font-semibold">Generátor titulkov</h2>
           <p className="text-gray-500 mt-2">
-            Tvor virálne titulky na sociálne siete pomocou AI.
+            Vytvor virálne, chytľavé titulky na sociálne siete.
           </p>
+          <Link href="/captions">
+            <button className="mt-4 px-4 py-2 bg-emerald-600 text-white rounded hover:bg-emerald-700 transition">
+              Otvoriť nástroj
+            </button>
+          </Link>
         </div>
+
+        {/* Prepis zvuku */}
         <div className="rounded-xl border border-gray-200 bg-white shadow-sm p-6 text-center hover:shadow-md transition">
-          <h2 className="text-xl font-semibold mt-2">Prepis zvuku</h2>
+          <h2 className="text-xl font-semibold">Prepis zvuku</h2>
           <p className="text-gray-500 mt-2">
             Nahraj hlasový záznam a získaj prepis do textu.
           </p>
+          <Link href="/transcribe">
+            <button className="mt-4 px-4 py-2 bg-fuchsia-600 text-white rounded hover:bg-fuchsia-700 transition">
+              Otvoriť nástroj
+            </button>
+          </Link>
         </div>
       </section>
     </main>
